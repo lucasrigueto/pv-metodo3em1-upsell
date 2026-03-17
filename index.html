@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpSell: Método 3 em 1 - Acesso Elite</title>
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Oswald:wght@500;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-deep: #0a0a0a;
+            --bg-card: #141414;
+            --accent-primary: #FFD700;
+            --accent-glow: rgba(255, 215, 0, 0.4);
+            --text-primary: #f5f5f5;
+            --text-secondary: #a0a0a0;
+            --border-tech: #2a2a2a;
+            --error: #ef4444;
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Technical Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 2px 2px, #1a1a1a 1px, transparent 0);
+            background-size: 32px 32px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 1. Progress bar */
+        .progress-header {
+            background: #000;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--border-tech);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background: #222;
+            margin: 12px 0;
+            position: relative;
+            border: 1px solid #333;
+        }
+
+        .progress-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background: var(--accent-primary);
+            box-shadow: 0 0 15px var(--accent-glow);
+            transition: width 2s ease;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            gap: 15px;
+        }
+
+        .urgent-tag {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+            padding: 4px 10px;
+            font-weight: 700;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* 2. Hero Section */
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5vw, 64px);
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .highlight {
+            color: var(--accent-primary);
+        }
+
+        .card-label {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Mockup Container (replacing VSL) */
+        .mockup-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto 0;
+        }
+
+        .mockup-container picture {
+            display: block;
+        }
+
+        .mockup-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6));
+        }
+
+        /* Subtle glow behind the mockup */
+        .mockup-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 60%;
+            background: radial-gradient(ellipse, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* 3. Contrast Section */
+        .contrast-section {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: var(--border-tech);
+            border: 2px solid var(--border-tech);
+            margin-bottom: 80px;
+        }
+
+        .contrast-card {
+            background: var(--bg-deep);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contrast-card.pro {
+            border-left: 4px solid var(--accent-primary);
+            background: linear-gradient(135deg, #0a0a0a 0%, #15150a 100%);
+        }
+
+        .contrast-card h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        .contrast-list {
+            list-style: none;
+        }
+
+        .contrast-list li {
+            margin-bottom: 16px;
+            display: flex;
+            gap: 12px;
+            font-size: 15px;
+            align-items: flex-start;
+        }
+
+        .contrast-list.muted li {
+            color: var(--text-secondary);
+        }
+
+        .contrast-list.pro-list li i {
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        .contrast-list.muted li i {
+            color: #444;
+            flex-shrink: 0;
+        }
+
+        /* 4. Bonus Stack */
+        .bonus-grid {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .dossier-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-tech);
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .dossier-card:hover {
+            border-color: #444;
+            transform: translateY(-5px);
+        }
+
+        /* Highlight Super Bonus #03 */
+        .dossier-card.super-bonus {
+            border: 2px solid var(--accent-primary);
+            background: linear-gradient(180deg, #141414 0%, #1a1a0a 100%);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .dossier-card.super-bonus:hover {
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .dossier-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .dossier-tag {
+            background: #222;
+            color: var(--text-primary);
+            padding: 4px 12px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            border: 1px solid #444;
+        }
+
+        .super-bonus .dossier-tag {
+            background: var(--accent-primary);
+            color: #000;
+            border: none;
+        }
+
+        .dossier-card h4 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .dossier-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .bonus-value-tag {
+            margin-top: 20px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: #555;
+            text-decoration: line-through;
+        }
+
+        /* 5. Escassez & Checkout */
+        .checkout-box {
+            margin-top: 120px;
+            padding: 80px 40px;
+            background: #000;
+            border: 3px solid var(--accent-primary);
+            text-align: center;
+            box-shadow: 0 0 60px var(--accent-glow);
+        }
+
+        .fear-of-loss {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px dashed var(--error);
+            padding: 16px;
+            color: var(--error);
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        .price-anchor {
+            font-size: 18px;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            margin-bottom: 8px;
+        }
+
+        .price-final {
+            font-family: var(--font-display);
+            font-size: 80px;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .price-final span {
+            font-size: 32px;
+            color: var(--accent-primary);
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--accent-primary);
+            color: #000;
+            padding: 24px 48px;
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 600px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 0 #b39700;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .btn-cta:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+
+        .no-thanks {
+            display: block;
+            margin-top: 24px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-decoration: underline;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .progress-text {
+                font-size: 10px;
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+
+            .contrast-section {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .mockup-container {
+                max-width: 90%;
+                margin-top: 30px;
+            }
+
+            .price-final {
+                font-size: 56px;
+            }
+
+            .checkout-box {
+                padding: 30px 20px;
+            }
+
+            .contrast-card {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Technical corner accents */
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent-primary);
+        }
+
+        .tl {
+            top: -5px;
+            left: -5px;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        .tr {
+            top: -5px;
+            right: -5px;
+            border-left: 0;
+            border-bottom: 0;
+        }
+
+        .bl {
+            bottom: -5px;
+            left: -5px;
+            border-right: 0;
+            border-top: 0;
+        }
+
+        .br {
+            bottom: -5px;
+            right: -5px;
+            border-left: 0;
+            border-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. Progress Header -->
+    <div class="progress-header">
+        <div class="container">
+            <div class="progress-text">
+                <span>Status: Aguardando Decisão Passo 2/2</span>
+                <div class="urgent-tag">90% COMPLETO</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- 2. Hero with Mockup -->
+        <section class="hero">
+            <div class="card-label">Sua vaga no Multímetro em 7 Dias está garantida</div>
+            <h1>Espere! Não feche esta página antes de ver <span class="highlight">O Próximo Nível</span></h1>
+
+            <div class="mockup-container">
+                <picture>
+                    <source srcset="mockup-metodo3em1v3.webp" type="image/webp">
+                    <img src="mockup-metodo3em1v3.png"
+                        alt="Método 3 em 1 - Treinamento completo de Elétrica Automotiva disponível em Notebook, Tablet e Celular"
+                        loading="eager" width="1080" height="1080">
+                </picture>
+            </div>
+        </section>
+
+        <!-- 3. Contrast Section -->
+        <section class="contrast-section">
+            <div class="contrast-card">
+                <span class="card-label">Profissional Comum</span>
+                <h3>O que acontece com a maioria?</h3>
+                <ul class="contrast-list muted">
+                    <li><i data-lucide="x-circle"></i> Fica horas batendo cabeça no mesmo carro</li>
+                    <li><i data-lucide="x-circle"></i> Troca peças boas por falta de certeza no teste</li>
+                    <li><i data-lucide="x-circle"></i> Depende de outros para resolver panes elétricas</li>
+                    <li><i data-lucide="x-circle"></i> Perde tempo, dinheiro e o sossego da oficina</li>
+                </ul>
+            </div>
+            <div class="contrast-card pro">
+                <span class="card-label">Profissional de Elite</span>
+                <h3>Como os feras trabalham?</h3>
+                <ul class="contrast-list pro-list">
+                    <li><i data-lucide="zap"></i> Mata o defeito em 15 minutos com segurança</li>
+                    <li><i data-lucide="zap"></i> Domina diagramas elétricos de qualquer carro</li>
+                    <li><i data-lucide="zap"></i> Resolve problemas elétricos e de injeção rindo</li>
+                    <li><i data-lucide="zap"></i> É reconhecido como referência na região</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. Bonus Grid -->
+        <div class="bonus-grid">
+            <div class="dossier-card">
+                <div class="dossier-header">
+                    <div class="dossier-tag">BÔNUS #01</div>
+                    <i data-lucide="instagram" color="#FFD700"></i>
+                </div>
+                <h4>CLOSE FRIENDS DO RAFAEL</h4>
+                <p>3 meses acompanhando meu dia a dia na oficina. Você vai ver na prática como eu mato os defeitos que
+                    chegam aqui.</p>
+                <div class="bonus-value-tag">CUSTAVA: R$ 59,70</div>
+            </div>
+
+            <div class="dossier-card">
+                <div class="dossier-header">
+                    <div class="dossier-tag">BÔNUS #02</div>
+                    <i data-lucide="dollar-sign" color="#FFD700"></i>
+                </div>
+                <h4>MODELOS DE COBRANÇA</h4>
+                <p>Vou te entregar o jeito certo de cobrar. Pare de dar diagnóstico de graça e comece a lucrar alto com
+                    seu conhecimento.</p>
+                <div class="bonus-value-tag">CUSTAVA: R$ 97,00</div>
+            </div>
+
+            <div class="dossier-card super-bonus">
+                <div class="dossier-header">
+                    <div class="dossier-tag">SUPER BÔNUS #03</div>
+                    <i data-lucide="users" color="#000"></i>
+                </div>
+                <h4>GRUPO EXCLUSIVO DE ELITE</h4>
+                <p>6 meses de suporte direto comigo e outros profissionais. Você nunca mais vai ficar sozinho na hora do
+                    aperto na oficina.</p>
+                <div class="bonus-value-tag">CUSTAVA: R$ 582,00</div>
+            </div>
+        </div>
+
+        <!-- 5. Checkout & Escassez -->
+        <section class="checkout-box" style="position: relative;">
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <div class="fear-of-loss">
+                ⚠️ CUIDADO: Se você fechar esta página, não terá outra chance com este valor.
+            </div>
+
+            <div class="price-anchor">Valor Total: R$ 1.438,00</div>
+            <div class="price-final"><span>12x de</span> R$ 29,70</div>
+            <p style="margin-top: 10px; color: var(--text-secondary);">ou R$ 297,00 à vista</p>
+
+            <a href="#" class="btn-cta">
+                ADICIONAR AO MEU PEDIDO AGORA →
+            </a>
+
+            <span class="no-thanks">Não, eu quero continuar como estou e perder essa chance única.</span>
+        </section>
+
+        <footer
+            style="padding: 100px 0 40px; text-align: center; color: #333; font-family: var(--font-mono); font-size: 10px;">
+            SEGURANÇA TOTAL // AMBIENTE CRIPTOGRAFADO
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        // Simular progresso até 90%
+        setTimeout(() => {
+            document.querySelector('.progress-bar').style.width = '90%';
+        }, 500);
+    </script>
+</body>
+
+</html>

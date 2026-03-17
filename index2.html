@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '797785133260217');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=797785133260217&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <title>OFERTA EXCLUSIVA: Método 3em1 - Acesso Elite</title>
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #1a1a1a;
+            --accent-primary: #FF6B00;
+            --accent-secondary: #FFD700;
+            --text-primary: #FFFFFF;
+            --text-secondary: #AAAAAA;
+            --text-muted: #666666;
+            --border: #2a2a2a;
+            --success: #22c55e;
+            --error: #ef4444;
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* 1. Progress Header (Urgency) */
+        .progress-header {
+            background: #000;
+            padding: 15px 0;
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .urgent-tag {
+            color: var(--accent-secondary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #222;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 85%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+            transition: width 2s ease;
+        }
+
+        /* 2. Hero Section */
+        .hero {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 107, 0, 0.1);
+            color: var(--accent-primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 107, 0, 0.2);
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5vw, 56px);
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight {
+            color: var(--accent-primary);
+        }
+
+        .hero-subheadline {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto 40px;
+        }
+
+        .mockup-container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .mockup-container img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+            border-radius: 12px;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 107, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+            transition: all 0.3s ease;
+            border: 4px solid white;
+        }
+
+        .mockup-container:hover .play-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--accent-primary);
+        }
+
+        /* 3. Product Info Section */
+        .product-info {
+            background: var(--bg-secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 36px);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-header h2 .highlight {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+
+        .pillar-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 107, 0, 0.1);
+            color: var(--accent-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .pillar-card h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .pillar-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* Modules List */
+        .modules-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .module-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .module-item:hover {
+            border-color: var(--accent-primary);
+            background: rgba(255, 107, 0, 0.05);
+        }
+
+        .module-number {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--accent-primary);
+            opacity: 0.5;
+            min-width: 40px;
+        }
+
+        .module-info h4 {
+            font-size: 18px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .module-info p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* 4. Social Proof (WhatsApp) */
+        .whatsapp-proof {
+            padding-bottom: 40px;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .proof-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .proof-item:hover {
+            transform: scale(1.02);
+        }
+
+        .proof-item img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding-bottom: 60px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .testimonial-video {
+            width: 100%;
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .testimonial-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--accent-primary);
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Super Bonus Section */
+        .super-bonus-section {
+            background: linear-gradient(180deg, #1a0f00 0%, #000 100%);
+            border-top: 2px solid var(--accent-primary);
+            border-bottom: 2px solid var(--accent-primary);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .super-bonus-badge {
+            background: var(--accent-primary);
+            color: #000;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 18px;
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+        }
+
+        .scarcity-box {
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px dashed var(--error);
+            padding: 15px 30px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin: 30px auto 0;
+            color: var(--error);
+            font-weight: 700;
+        }
+
+        .super-bonus-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .super-bonus-content h2 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .super-bonus-content p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* 5. Contrast Section */
+        .contrast-wrapper {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 60px 0;
+            border: 1px solid var(--border);
+        }
+
+        .contrast-box {
+            padding: 60px 40px;
+        }
+
+        .contrast-box.negative {
+            background: #0a0a0a;
+            border-right: 1px solid var(--border);
+        }
+
+        .contrast-box.positive {
+            background: linear-gradient(135deg, #1a0f00 0%, #0a0a0a 100%);
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .contrast-box h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+        }
+
+        .contrast-list {
+            list-style: none;
+        }
+
+        .contrast-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            align-items: flex-start;
+        }
+
+        .negative .contrast-list li {
+            color: var(--text-muted);
+        }
+
+        .negative .contrast-list li i {
+            color: var(--error);
+            flex-shrink: 0;
+        }
+
+        .positive .contrast-list li i {
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        /* 6. Bonus Section */
+        .bonus-section {
+            background: #000;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bonus-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bonus-card.featured {
+            border: 2px solid var(--accent-primary);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .bonus-img {
+            width: 100%;
+            height: 200px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .bonus-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bonus-content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .bonus-tag {
+            background: var(--accent-primary);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .bonus-card h4 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .bonus-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .bonus-value {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        /* 7. Value Stack & Price */
+        .offer-box {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 60px;
+            border: 2px solid var(--accent-primary);
+            text-align: center;
+            max-width: 800px;
+            margin: 80px auto;
+            position: relative;
+        }
+
+        .stack-list {
+            text-align: left;
+            margin-bottom: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .stack-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+        }
+
+        .stack-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
+        .stack-item span:last-child {
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .price-anchor {
+            font-size: 20px;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+
+        .price-main {
+            font-family: var(--font-display);
+            font-size: 72px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .price-main span {
+            font-size: 28px;
+            color: var(--accent-primary);
+        }
+
+        .btn-cta {
+            background: linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%);
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 500px;
+            justify-content: center;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+            transition: transform 0.3s ease;
+            animation: pulse-cta 2s infinite;
+        }
+
+        @keyframes pulse-cta {
+
+            0%,
+            100% {
+                box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow: 0 15px 40px rgba(255, 107, 0, 0.5);
+                transform: scale(1.02);
+            }
+        }
+
+        .no-thanks {
+            display: block;
+            margin-top: 24px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            opacity: 0.4;
+        }
+
+        /* 8. Guarantee */
+        .guarantee {
+            text-align: center;
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        .guarantee p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-top: 16px;
+        }
+
+        .guarantee-icon {
+            margin-bottom: 24px;
+            color: var(--accent-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .pillars-grid,
+            .proof-grid,
+            .bonus-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contrast-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .price-main {
+                font-size: 56px;
+            }
+
+            .bonus-card.featured {
+                transform: scale(1);
+            }
+
+            .offer-box {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Sticky CTA Mobile */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #111;
+            padding: 12px 20px;
+            border-top: 2px solid var(--accent-primary);
+            z-index: 2000;
+            text-align: center;
+        }
+
+        .sticky-cta .btn-cta {
+            margin-top: 0;
+            padding: 14px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. Progress Header -->
+    <header class="progress-header">
+        <div class="container">
+            <div class="progress-text">
+                <span>Passo 2 de 2: Personalizando seu Acesso</span>
+                <div class="urgent-tag"><i data-lucide="zap"></i> 90% CONCLUÍDO</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Section -->
+        <section class="hero container">
+            <div class="hero-badge">Atenção: Oferta Única e Exclusiva</div>
+            <h1>Não feche esta página antes de ver <br><span class="highlight">O Próximo Nível</span></h1>
+            <p class="hero-subheadline">
+                Você acaba de dar o primeiro passo com o Multímetro em 7 Dias. Mas se você quer parar de apenas "usar
+                uma ferramenta" e quer se tornar um <strong>Especialista em Diagnósticos Elétricos</strong>, esta é a
+                única oportunidade que você terá.
+            </p>
+
+            <div class="mockup-container">
+                <img src="mockup-metodo3em1v3.png" alt="Mockup Método 3em1">
+                <!-- VSL Play Icon (Commented until video is ready)
+                <div class="play-overlay">
+                    <i data-lucide="play" fill="white" size="40"></i>
+                </div>
+                -->
+
+                <a href="https://pay.kiwify.com.br/yO3P7QQ?split=12" class="btn-cta">
+                    ADICIONAR AO MEU PEDIDO AGORA →
+                </a>
+
+                <span class="no-thanks">AVISO: Essa oportunidade não se repetirá</span>
+
+            </div>
+        </section>
+
+        <!-- 3. Product Info (O que é) -->
+        <section class="product-info">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O Que é o <span class="highlight">Método 3em1?</span></h2>
+                    <p>O treinamento definitivo para quem cansa de trocar peças na sorte e quer dominar a elétrica
+                        automotiva de uma vez por todas.</p>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i data-lucide="brain"></i></div>
+                        <h3>Raciocínio Lógico</h3>
+                        <p>Aprenda a pensar como os melhores autoeletricistas. Não decore, entenda como a energia flui
+                            no veículo.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i data-lucide="layout"></i></div>
+                        <h3>Domínio de Diagramas</h3>
+                        <p>Perca o medo de esquemas elétricos. Saiba interpretar qualquer diagrama elétrico ou de
+                            injeção com facilidade.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i data-lucide="zap"></i></div>
+                        <h3>Diagnóstico Ágil</h3>
+                        <p>Reduza o tempo de diagnóstico de horas para minutos. Mate defeitos complexos com segurança
+                            total.</p>
+                    </div>
+                </div>
+
+                <div class="modules-list">
+                    <div class="module-item">
+                        <div class="module-number">01</div>
+                        <div class="module-info">
+                            <h4>Grandezas Elétricas</h4>
+                            <p>Tensão, Corrente, Resistência e Potência aplicadas ao diagnóstico real.</p>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-number">02</div>
+                        <div class="module-info">
+                            <h4>Multímetro e Multiprobe</h4>
+                            <p>Como usar seu equipamento para extrair o máximo de informação do veículo.</p>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-number">03</div>
+                        <div class="module-info">
+                            <h4>Circuitos Elétricos</h4>
+                            <p>Entenda a lógica de funcionamento de qualquer sistema elétrico moderno - Chave, Relé,
+                                Chave de Farol, Circuito Completo</p>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-number">04</div>
+                        <div class="module-info">
+                            <h4>Sistema de Carga</h4>
+                            <p>Diagnósticos precisos de alternadores e sistemas de gerenciamento de energia - Alternador
+                                Convencional, Pilotado, Reset Sistema de Carga</p>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-number">05</div>
+                        <div class="module-info">
+                            <h4>Teste de Bateria</h4>
+                            <p>Checkup completo e diagnóstico de saúde de baterias convencionais e Start-Stop - Teste
+                                convencional, eletrônico, gráfico resistência, cuidados e boas práticas</p>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-number">06</div>
+                        <div class="module-info">
+                            <h4>Sistema de Arrefecimento</h4>
+                            <p>Análise elétrica de eletroventiladores, sensores e módulos de comando.</p>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-number">07</div>
+                        <div class="module-info">
+                            <h4>Diagnóstico Elétrico Veicular</h4>
+                            <p>O processo lógico de ponta a ponta para matar qualquer defeito na oficina - Teste de
+                                fusível, Carro que não carrega, teste de bomba de combustível, teste completo de Motor
+                                de Partida, etc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Social Proof (Testimonials) -->
+        <section class="testimonials container">
+            <div class="section-header">
+                <h2>Quem Já Aplicou, <span class="highlight">Recomenda</span></h2>
+                <p>Veja o depoimento de quem já transformou sua carreira com o Método do Rafael.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Fernando -->
+                <div class="testimonial-card">
+                    <div class="testimonial-video"
+                        onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/XnRTgMudZlc?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+                        <img src="https://img.youtube.com/vi/XnRTgMudZlc/maxresdefault.jpg" alt="Depoimento Fernando">
+                        <div class="play-overlay" style="width: 50px; height: 50px; border-width: 2px;">
+                            <i data-lucide="play" fill="white" size="24"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <span class="testimonial-name">Fernando</span>
+                        <span class="testimonial-role">Mecânico</span>
+                    </div>
+                </div>
+                <!-- Rafael -->
+                <div class="testimonial-card">
+                    <div class="testimonial-video"
+                        onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/iEGISSF41Dg?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+                        <img src="https://img.youtube.com/vi/iEGISSF41Dg/maxresdefault.jpg" alt="Depoimento Rafael">
+                        <div class="play-overlay" style="width: 50px; height: 50px; border-width: 2px;">
+                            <i data-lucide="play" fill="white" size="24"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <span class="testimonial-name">Rafael</span>
+                        <span class="testimonial-role">Auto Elétrico</span>
+                    </div>
+                </div>
+                <!-- Outros -->
+                <div class="testimonial-card">
+                    <div class="testimonial-video"
+                        onclick="this.innerHTML = '<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed/ycbhkEiYWrQ?autoplay=1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+                        <img src="https://img.youtube.com/vi/ycbhkEiYWrQ/maxresdefault.jpg" alt="Depoimento Alunos">
+                        <div class="play-overlay" style="width: 50px; height: 50px; border-width: 2px;">
+                            <i data-lucide="play" fill="white" size="24"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <span class="testimonial-name">Outros Alunos</span>
+                        <span class="testimonial-role">Eletricistas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contrast Section -->
+        <section class="container">
+            <div class="contrast-wrapper">
+                <div class="contrast-box negative">
+                    <h3>Sem o Método 3em1...</h3>
+                    <ul class="contrast-list">
+                        <li><i data-lucide="x-circle"></i> Fica preso em carros na oficina por dias</li>
+                        <li><i data-lucide="x-circle"></i> Toma prejuízo trocando peças por dúvida</li>
+                        <li><i data-lucide="x-circle"></i> Depende de favor para ler esquemas elétricos</li>
+                        <li><i data-lucide="x-circle"></i> Vê os serviços lucrativos irem para a concorrência</li>
+                    </ul>
+                </div>
+                <div class="contrast-box positive">
+                    <h3>Com o Método 3em1...</h3>
+                    <ul class="contrast-list">
+                        <li><i data-lucide="check-circle"></i> Resolve panes elétricas complexas em minutos</li>
+                        <li><i data-lucide="check-circle"></i> Tem o Rafael Batista "dentro da sua oficina" via Grupo
+                        </li>
+                        <li><i data-lucide="check-circle"></i> Cobra o valor justo e é respeitado como referência</li>
+                        <li><i data-lucide="check-circle"></i> Dorme tranquilo sabendo que o serviço não vai voltar</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Bonus Section -->
+        <section class="bonus-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bônus Inclusos no <span class="highlight">Acesso de Hoje</span></h2>
+                    <p>Ao aproveitar esta oferta agora, você ganha acesso imediato a esses extras exclusivos:</p>
+                </div>
+
+                <div class="bonus-grid">
+                    <div class="bonus-card">
+                        <div class="bonus-img"><img src="closefriends.png" alt="Capa Close Friends"></div>
+                        <div class="bonus-content">
+                            <span class="bonus-tag">Bônus #01</span>
+                            <h4>Close Friends</h4>
+                            <p>3 meses acompanhando o dia a dia real da oficina do Rafael. Insights práticos direto da
+                                oficina.</p>
+                            <span class="bonus-value">Valor: R$ 19,90 x 3 = R$ 59,70</span>
+                        </div>
+                    </div>
+                    <div class="bonus-card">
+                        <div class="bonus-img"><img src="fature-mais.png" alt="Capa Fature Mais"></div>
+                        <div class="bonus-content">
+                            <span class="bonus-tag">Bônus #02</span>
+                            <h4>Fature Mais</h4>
+                            <p>Aula Exclusiva com Especialista em Gestão de Oficinas para você aprender como cobrar pelo
+                                seu diagnóstico e cobrar mais pelos serviços elétricos.</p>
+                            <span class="bonus-value">Valor: R$ 97,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.5 Super Bonus - Grupo Elite -->
+        <section class="super-bonus-section">
+            <div class="container">
+                <div class="super-bonus-badge">#COMUNIDADE</div>
+                <div class="super-bonus-content">
+                    <h2>Super Bônus: <span class="highlight">Grupo de Elite</span></h2>
+                    <p>Você nunca estará sozinho. Profissionais reais resolvendo problemas reais todos os dias com o
+                        apoio direto do Rafael Batista e a experiência dos feras da comunidade.</p>
+
+                    <div class="bonus-content">
+                        <span class="bonus-value">Valor: R$ 29,90 x 12 = R$ 358,80</span>
+                    </div>
+
+                    <div class="proof-grid">
+                        <div class="proof-item"><img src="grupo-elite1.png" alt="Print WhatsApp Grupo Elite 1"></div>
+                        <div class="proof-item"><img src="grupo-elite2.png" alt="Print WhatsApp Grupo Elite 2"></div>
+                        <div class="proof-item"><img src="grupo-elite3.png" alt="Print WhatsApp Grupo Elite 3"></div>
+                    </div>
+
+                    <div class="scarcity-box">
+                        <i data-lucide="clock"></i>
+                        <span>LIBERADO APENAS PARA QUEM COMPRAR HOJE!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Offer & Pricing -->
+        <section class="container">
+            <div class="offer-box">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <h2>Tudo Pronto Para Sua <span class="highlight">Evolução</span></h2>
+                    <p style="color: var(--error); font-weight: 700; font-size: 14px; margin-top: 10px;">⚠️ OPORTUNIDADE
+                        ÚNICA: SE FECHAR ESTA PÁGINA, ESTE VALOR NÃO VOLTA.</p>
+                </div>
+
+                <div class="stack-list">
+                    <div class="stack-item"><span>Método 3em1 (Completo + Módulos)</span> <span>R$ 797,00</span></div>
+                    <div class="stack-item"><span>Bônus 1: Close Friends</span> <span>R$ 59,70</span></div>
+                    <div class="stack-item"><span>Bônus 2: Aula Fature Mais</span> <span>R$ 97,00</span></div>
+                    <div class="stack-item"><span>Super Bônus: Grupo de Elite</span> <span>R$ 358,80</span>
+                    </div>
+                    <div class="stack-item"><span>VALOR TOTAL ACUMULADO</span> <span>R$ 1.312,50</span></div>
+                </div>
+
+                <div class="price-anchor">Preço Original: R$ 1.312,50</div>
+                <div class="price-main"><span>12x de</span> R$ 29,70</div>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">ou R$ 297,00 à vista</p>
+
+                <a href="https://pay.kiwify.com.br/yO3P7QQ?split=12" class="btn-cta">
+                    ADICIONAR AO MEU PEDIDO AGORA →
+                </a>
+
+                <span class="no-thanks">Não obrigado! Quero deixar essa chance passar.</span>
+            </div>
+
+            <!-- 8. Guarantee -->
+            <div class="guarantee">
+                <div class="guarantee-icon"><i data-lucide="shield-check" size="64" width="60" height="60"
+                        color="#37F357" viewBox="0 0 24 24"></i></div>
+                <h3>Sua Satisfação em 1º Lugar</h3>
+                <p>Você tem <strong>07 dias de garantia incondicional</strong>. Se dentro desse período você achar que o
+                    Método 3em1 não é para você, devolvemos cada centavo sem perguntas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="padding: 100px 0 60px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 13px;">
+        <div class="container">
+            <p>© 2024 Elétrica 3em1 - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-family: var(--font-mono); font-size: 10px;">AMBIENTE SEGURO E CRIPTOGRAFADO
+                // SEGURANÇA POR KIWIFY</p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA Mobile -->
+    <div class="sticky-cta">
+        <a href="https://pay.kiwify.com.br/yO3P7QQ?split=12" class="btn-cta">
+            SIM! QUERO ME TORNAR ELITE →
+        </a>
+    </div>
+
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Progress Bar Logic
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const bar = document.getElementById('progressBar');
+                bar.style.width = '90%';
+            }, 300);
+        });
+
+        // Hide Sticky CTA when at the main CTA area
+        const offerBox = document.querySelector('.offer-box');
+        const stickyCta = document.querySelector('.sticky-cta');
+
+        window.addEventListener('scroll', () => {
+            const rect = offerBox.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                stickyCta.style.display = 'none';
+            } else {
+                if (window.innerWidth <= 768) {
+                    stickyCta.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
